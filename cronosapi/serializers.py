@@ -3,19 +3,19 @@ from rest_framework import serializers
 from .models import Member, Post, Service
 
 
-class MemberSerializer(serializers.ModelSerializer):
+class MemberSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Member
-        fields = ('id', 'name', 'email')
+        fields = ('id', 'name', 'email', 'url')
 
 
-class PostSerializer(serializers.ModelSerializer):
+class PostSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Post
-        fields = ('id', 'title', 'body', 'author', 'date')
+        fields = ('id', 'title', 'body', 'author', 'date', 'url')
 
 
-class ServiceSerializer(serializers.ModelSerializer):
+class ServiceSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Service
-        fields = ('id', 'name', 'description')
+        fields = ('id', 'name', 'description', 'url')
