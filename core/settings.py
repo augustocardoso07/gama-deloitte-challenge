@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5yl*4l-smd3zfoo&(&4pslvp=6ap05h93n8))bv%!bgo$xaswq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['gama-deloitte-challenge', 'localhost']
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_swagger',
     'cronosapi',
+    'django_seed',
 ]
 
 MIDDLEWARE = [
