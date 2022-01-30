@@ -14,7 +14,7 @@ apipatters = [
 ]
 
 schema = get_swagger_view(
-    title="Documentação da Cronos API", url='/docs', patterns=apipatters)
+    title="Documentação da Cronos API", url='/cronosapi', patterns=apipatters)
 
 urlpatterns = apipatters + [
     re_path('docs', schema),
